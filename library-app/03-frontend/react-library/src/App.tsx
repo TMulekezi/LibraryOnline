@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
+import { Navbar } from './layouts/NavBarAndFooter/Navbar';
+import { HomePage } from './layouts/HomePage/Homepage';
+import { Footer } from './layouts/NavBarAndFooter/Footer';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-     <h1>Welcome to the fullstack course :-)</h1>
+    <div>
+      <Navbar />
+      <HomePage />
+      <Footer />
     </div>
   );
 }
 
-export default App;
