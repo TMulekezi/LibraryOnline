@@ -1,10 +1,9 @@
 package com.luv2code.springbootlibrary.entity;
 
 
-import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.Data;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "checkout")
 @Data
