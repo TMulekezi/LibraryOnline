@@ -20,13 +20,14 @@ public class ExtractJWT {
             String[] keyValue = entry.split(":");
 
             if (keyValue[0].equals(extraction)) {
+
                 int remove = 1;
 
-                if (keyValue[1].equals("}")) {
+                if (keyValue[1].endsWith("}")) {
                     remove = 2;
                 }
 
-                keyValue[1] = keyValue[1].substring(0, keyValue[1].length() - 1);
+                keyValue[1] = keyValue[1].substring(0, keyValue[1].length() - remove);
                 keyValue[1] = keyValue[1].substring(1);
 
                 map.put(keyValue[0], keyValue[1]);
